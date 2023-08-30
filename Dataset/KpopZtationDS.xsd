@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="KpopZtationDS" targetNamespace="http://tempuri.org/KpopZtationDS.xsd" xmlns:mstns="http://tempuri.org/KpopZtationDS.xsd" xmlns="http://tempuri.org/KpopZtationDS.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="KpopZtationDBConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="KpopZtationDBConnectionString (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.KpopZtationDBConnectionString.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="KpopZtationDS" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="KpopZtationDS" msprop:Generator_UserDSName="KpopZtationDS">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="HeaderTable" msprop:Generator_TableClassName="HeaderTableDataTable" msprop:Generator_TableVarName="tableHeaderTable" msprop:Generator_RowChangedName="HeaderTableRowChanged" msprop:Generator_TablePropName="HeaderTable" msprop:Generator_RowDeletingName="HeaderTableRowDeleting" msprop:Generator_RowChangingName="HeaderTableRowChanging" msprop:Generator_RowEvHandlerName="HeaderTableRowChangeEventHandler" msprop:Generator_RowDeletedName="HeaderTableRowDeleted" msprop:Generator_RowClassName="HeaderTableRow" msprop:Generator_UserTableName="HeaderTable" msprop:Generator_RowEvArgName="HeaderTableRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TransactionID" msprop:Generator_ColumnVarNameInTable="columnTransactionID" msprop:Generator_ColumnPropNameInRow="TransactionID" msprop:Generator_ColumnPropNameInTable="TransactionIDColumn" msprop:Generator_UserColumnName="TransactionID" type="xs:string" minOccurs="0" />
+              <xs:element name="CustomerID" msprop:Generator_ColumnVarNameInTable="columnCustomerID" msprop:Generator_ColumnPropNameInRow="CustomerID" msprop:Generator_ColumnPropNameInTable="CustomerIDColumn" msprop:Generator_UserColumnName="CustomerID" type="xs:string" minOccurs="0" />
+              <xs:element name="TransactionDate" msprop:Generator_ColumnVarNameInTable="columnTransactionDate" msprop:Generator_ColumnPropNameInRow="TransactionDate" msprop:Generator_ColumnPropNameInTable="TransactionDateColumn" msprop:Generator_UserColumnName="TransactionDate" type="xs:string" minOccurs="0" />
+              <xs:element name="GrandTotal" msprop:Generator_ColumnVarNameInTable="columnGrandTotal" msprop:Generator_ColumnPropNameInRow="GrandTotal" msprop:Generator_ColumnPropNameInTable="GrandTotalColumn" msprop:Generator_UserColumnName="GrandTotal" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DetailTable" msprop:Generator_TableClassName="DetailTableDataTable" msprop:Generator_TableVarName="tableDetailTable" msprop:Generator_RowChangedName="DetailTableRowChanged" msprop:Generator_TablePropName="DetailTable" msprop:Generator_RowDeletingName="DetailTableRowDeleting" msprop:Generator_RowChangingName="DetailTableRowChanging" msprop:Generator_RowEvHandlerName="DetailTableRowChangeEventHandler" msprop:Generator_RowDeletedName="DetailTableRowDeleted" msprop:Generator_RowClassName="DetailTableRow" msprop:Generator_UserTableName="DetailTable" msprop:Generator_RowEvArgName="DetailTableRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TransactionID" msprop:Generator_ColumnVarNameInTable="columnTransactionID" msprop:Generator_ColumnPropNameInRow="TransactionID" msprop:Generator_ColumnPropNameInTable="TransactionIDColumn" msprop:Generator_UserColumnName="TransactionID" type="xs:string" minOccurs="0" />
+              <xs:element name="AlbumName" msprop:Generator_ColumnVarNameInTable="columnAlbumName" msprop:Generator_ColumnPropNameInRow="AlbumName" msprop:Generator_ColumnPropNameInTable="AlbumNameColumn" msprop:Generator_UserColumnName="AlbumName" type="xs:string" minOccurs="0" />
+              <xs:element name="Qty" msprop:Generator_ColumnVarNameInTable="columnQty" msprop:Generator_ColumnPropNameInRow="Qty" msprop:Generator_ColumnPropNameInTable="QtyColumn" msprop:Generator_UserColumnName="Qty" type="xs:string" minOccurs="0" />
+              <xs:element name="AlbumPrice" msprop:Generator_ColumnVarNameInTable="columnAlbumPrice" msprop:Generator_ColumnPropNameInRow="AlbumPrice" msprop:Generator_ColumnPropNameInTable="AlbumPriceColumn" msprop:Generator_UserColumnName="AlbumPrice" type="xs:string" minOccurs="0" />
+              <xs:element name="SubTotal" msprop:Generator_ColumnVarNameInTable="columnSubTotal" msprop:Generator_ColumnPropNameInRow="SubTotal" msprop:Generator_ColumnPropNameInTable="SubTotalColumn" msprop:Generator_UserColumnName="SubTotal" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <xs:annotation>
+    <xs:appinfo>
+      <msdata:Relationship name="HeaderTable_DetailTable" msdata:parent="HeaderTable" msdata:child="DetailTable" msdata:parentkey="TransactionID" msdata:childkey="TransactionID" msprop:Generator_UserChildTable="DetailTable" msprop:Generator_ChildPropName="GetDetailTableRows" msprop:Generator_UserRelationName="HeaderTable_DetailTable" msprop:Generator_ParentPropName="HeaderTableRow" msprop:Generator_RelationVarName="relationHeaderTable_DetailTable" msprop:Generator_UserParentTable="HeaderTable" />
+    </xs:appinfo>
+  </xs:annotation>
+</xs:schema>

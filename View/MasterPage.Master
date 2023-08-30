@@ -1,0 +1,74 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.master.cs" Inherits="KpopZtation.View.MasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+     <%--<link href="Styles/NavbarStyle.css" rel="stylesheet" />--%>
+    <style>
+        *{
+            margin:0;
+            text-decoration:none;
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        #logo{
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 1rem;
+            padding: 4px 8px;
+            background-color: #b8b5ff;
+            border-radius :4px;
+
+        }
+        .button{
+            border:none;
+            background:none;
+            padding: 4px 8px;
+        }
+        .button:hover{
+            border-bottom: 2px solid black;
+        }
+        header{
+            padding: 16px 32px;
+            display:flex;
+            justify-content:space-between;
+            border-bottom: 3px solid #423db9;
+        }
+
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+         <header>
+             <div style="display:flex ; flex-direction:row; gap:8px">
+                <p ID="logo">KpopZtation</p>
+                <asp:Button CssClass="button" ID="BtnHome" runat="server" Text="Home" OnClick="BtnHome_Click" />
+             </div>
+            <div ID="NavGuest" runat="server" style="display:inline">
+                <asp:Button CssClass="button" ID="BtnLogin" runat="server" Text="Login" OnClick="BtnLogin_Click" />
+                <asp:Button CssClass="button" ID="BtnRegister" runat="server" Text="Register" OnClick="BtnRegister_Click" />
+            </div>
+
+            <div ID="NavCustomer" runat="server" style="display:inline">
+                <asp:Button CssClass="button" ID="BtnCart" runat="server" Text="Cart" OnClick="BtnCart_Click" />
+                <asp:Button CssClass="button" ID="BtnTransactionHistory" runat="server" Text="Transaction" OnClick="BtnTransactionHistory_Click" />
+                <asp:Button CssClass="button" ID="BtnUpdateProfile" runat="server" Text="Profile" OnClick="BtnUpdateProfile_Click" />
+                <asp:Button CssClass="button" ID="BtnLogout" runat="server" Text="Logout" OnClick="BtnLogout_Click" />
+            </div>
+
+            <div ID="NavAdmin" runat="server" style="display:inline">
+                <asp:Button CssClass="button" ID="BtnTransactionReport" runat="server" Text="Transaction" OnClick="BtnTransactionReport_Click" />
+                <asp:Button CssClass="button" ID="BtnAdminUpdateProfile" runat="server" Text="Profile" OnClick="BtnUpdateProfile_Click" />
+                <asp:Button CssClass="button" ID="BtnAdminLogout" runat="server" Text="Logout" OnClick="BtnLogout_Click" />
+            </div>
+            
+        </header>
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>
